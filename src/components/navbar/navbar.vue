@@ -21,4 +21,14 @@ export default {
 </script>
 
 <style>
+
+.fa-chevron-down {
+    margin-left: 8px;
+    color: #20D3C2;
+    font-size: 13px;
+}
+
+.outline-grey{
+  border: 1px solid #E3E3E3;
+}
 </style>

@@ -21,5 +21,14 @@ export default {
 </script>
 
 <style>
+body {
+  font-family: roboto;
+}
+
+a {
+  color: white;
+}
+
+
 
 </style>
