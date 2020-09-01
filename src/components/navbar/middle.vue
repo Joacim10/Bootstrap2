@@ -47,14 +47,12 @@
                         </li>
                         <li class="pl-2 pl-lg-0 nav-item active">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-random"></i>
-                                <span class="badge badge-pill badge-info">0</span>
+                                <i class="fas fa-random"><span class="badge badge-pill badge-info">0</span></i>
                             </a>
                         </li>
                         <li class="pl-2 pl-lg-0 nav-item active">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-shopping-bag"></i>
-                                <span class="badge badge-pill badge-info">0</span>
+                                <i class="fas fa-shopping-bag"><span class="badge badge-pill badge-info">0</span></i>
                                 $0.00
                             </a>
                         </li>
@@ -131,5 +129,16 @@ form {
     flex-grow: 0;
 }
 
+.badge {
+    position: absolute;
+    top: -7px;
+    z-index: +1;
+    left: 9px;
+    font-size: 0.5rem;
+}
+
+.nav-link > i {
+    position: relative;
+}
 
 </style>
