@@ -1,7 +1,7 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info py-0">
+    <div class="navbar navbar-expand-md navbar-dark bg-info py-0">
         <div class="container">  
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle pl-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,7 +26,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="my-2 my-lg-0">
+                <div class="my-2 my-md-0">
                     <ul class="navbar-nav">
                         <li class="nav-item active border-right">
                             <router-link class="nav-link" to="#">Newsletter <span class="sr-only">(current)</span></router-link>
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
 </template>
 
 <script>

@@ -1,13 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg outline-grey navbar-light bg-white py-0">
         <div class="container">  
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                <ul class="navbar-nav mr-lg-auto flex-row justify-content-between">
+                    <li class="d-none d-lg-inline-block nav-item">
                         <div class="dropdown">
                         <button class="btn btn-info mr-lg-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bars"></i>
@@ -68,7 +64,7 @@
                         <a class="nav-link" href="#">Blog<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
-                <button class="btn btn-info ml-auto">
+                <button class="d-none d-lg-inline-block btn btn-info ml-auto">
                     SPECIAL OFFER
                 </button>
             </div>
@@ -86,6 +82,10 @@ export default {
 
 .nav-link {
     font-size: 18px;
+}
+
+.dropdown-menu {
+    position: absolute !important;
 }
 
 

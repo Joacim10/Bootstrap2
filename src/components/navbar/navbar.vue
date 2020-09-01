@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <Top></Top>
+    <Top class="d-none d-lg-block"></Top>
     <Middle></Middle>
     <Bottom></Bottom>
   </div>
@@ -31,4 +31,17 @@ export default {
 .outline-grey{
   border: 1px solid #E3E3E3;
 }
+
+.navbar-expand-lg>.container{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar-expand-lg>.container{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+  }
+}
+
 </style>

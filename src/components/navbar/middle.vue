@@ -1,20 +1,15 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white my-3">
-        <div class="container">  
-            <div class="">
-                <a class="navbar-brand" href="#"><img src="../../assets/logo.png" alt="picture"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mt-3 mb-lg-3">
+        <div class="container d-flex justify-content-between">  
+            <a class="navbar-brand" href="#"><img src="../../assets/logo.png" alt="picture"></a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="ml-auto mr-lg-4 form-inline my-lg-0 rounded">
-                    <div class="input-group">
-                    <input id="main-search" type="text" class="form-control outline-grey rounded-left" aria-label="Text input with segmented dropdown button" placeholder="Search products...">
+            <form class="form-inline my-lg-0 rounded">
+                <div class="input-group">
+                    <input id="main-search" type="text" class="d-none d-md-block form-control outline-grey rounded-left" aria-label="Text input with segmented dropdown button" placeholder="Search Products...">
+                    <input id="main-search" type="text" class="d-md-none form-control outline-grey rounded-left" aria-label="Text input with segmented dropdown button" placeholder="Search...">
                     <div class="input-group-append">
-                        <button type="button" class="btn bg-white outline-grey dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Categories <i class="fas fa-chevron-down"></i>
+                        <button type="button" class="btn bg-white outline-grey dropdown-toggle-split d-none d-md-inline-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Categories</span><i class="fas fa-chevron-down"></i>
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -25,34 +20,38 @@
                             <a class="dropdown-item" href="#">Separated link</a>
                         </div>
                     </div>
-                        <button type="button" class="bg-info btn btn-outline-none rounded-right">
-                        <a href="#"><i class="fas fa-search"></i></a>
-                        <span class="sr-only">Search</span>
-                        </button>
-                    </div>
-                </form>
+                    <button type="button" class="bg-info btn btn-outline-none rounded-right">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <span class="sr-only">Search</span>
+                    </button>
+                </div>
+            </form>
 
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="my-0 my-lg-0">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="my-0">
+                    <ul class="navbar-nav flex-row justify-content-end">
+                        <li class="pl-2 pl-lg-0 nav-item active">
                             <a class="nav-link" href="#">
                                 <i class="far fa-user"></i>
                                 My Account 
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="pl-2 pl-lg-0 nav-item active">
                             <a class="nav-link" href="#">
                                 <i class="far fa-heart"></i>
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="pl-2 pl-lg-0 nav-item active">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-random"></i>
                                 <span class="badge badge-pill badge-info">0</span>
                             </a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="pl-2 pl-lg-0 nav-item active">
                             <a class="nav-link" href="#">
                                 <i class="fas fa-shopping-bag"></i>
                                 <span class="badge badge-pill badge-info">0</span>
@@ -84,7 +83,52 @@ export default {
 }
 
 #main-search {
-    width: 400px;
+    width: 120px;
+}
+
+form {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.navbar { 
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #main-search {
+        width: 250px;
+    }
+
+    .navbar { 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    #main-search {
+        width: 400px;
+    }
+}
+
+#navbar-toggler{
+    margin-left: auto;
+}
+
+@media screen and (min-width: 411px) {
+    #navbar-toggler{
+        margin-left: 0;
+    }
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+#navbarSupportedContent {
+    flex-grow: 0;
 }
 
 
