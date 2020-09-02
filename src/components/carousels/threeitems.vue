@@ -26,13 +26,13 @@ data() {
       windowSize: 3,
       paginationFactor: 220,
       items: [
-        {name: 'Kin Khao', tag: ["Thai"]},
-        {name: 'Jū-Ni', tag: ["Sushi", "Japanese", "$$$$"]},
-        {name: 'Delfina', tag: ["Pizza", "Casual"]},
-        {name: 'San Tung', tag: ["Chinese", "$$"]},
-        {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"]},
-        {name: 'Locanda', tag: ["Italian"]},
-        {name: 'Garden Creamery', tag: ["Ice cream"]},
+        {name: 'Kin Khao', tag: ["Thai"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Jū-Ni', tag: ["Sushi", "Japanese", "$$$$"], previous: '220', price: '190', img: 'Product thumb.png'},
+        {name: 'Delfina', tag: ["Pizza", "Casual"], previous: '220', price: '190', img: 'Product thumb2.png'},
+        {name: 'San Tung', tag: ["Chinese", "$$"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"], previous: '220', price: '190', img: 'Product thumb.png'},
+        {name: 'Locanda', tag: ["Italian"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Garden Creamery', tag: ["Ice cream"], previous: '220', price: '190', img: 'Product thumb.png'},
       ]
     }
   },

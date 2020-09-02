@@ -1,18 +1,27 @@
 <template>
     <div class="card-main">
-            <img src="https://placehold.it/200x200"/>
+            <img :src="require(`@/assets/${item.img}`)" alt="">
         <div class="card-original card-body card-carousel--card--footer">
-                <p>{{ item.name }}</p>
                 <p class="tag" v-for="(tag,index) in item.tag" :key="tag" :class="index &gt; 0 ? 'secondary' : ''">{{ item.tag[index] }}</p>
         </div>
         <div class="card-hover d-none card-body">
             <div class="top-right">
-                <div>hej</div>
-                <div>på</div>
-                <div>dig</div>
+                <i class="my-1 fas fa-circle text-danger"></i>
+                <i class="my-1 fas fa-heart"></i>
+                <i class="my-1 fas fa-random"></i>
+                <i class="my-1 fas fa-search"></i>
+                <i class="my-1 fas fa-shopping-cart"></i>
+                
             </div>
             <div class="bottom-left">
-                på dig
+                <p>{{ item.name }}</p>
+                <p class="border d-inline-block p-1 small text-center">fashion</p>
+                <div class="">
+                    <p class=""><s>${{ item.previous }}</s></p>
+                </div>
+                <div class="text-info">
+                    <h3 class="">${{ item.price }}</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -34,6 +43,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: between;
+        align-items: center;
         background-color: white;
         border-radius: 20px;
         padding: 5px;
@@ -41,13 +51,24 @@ export default {
     }
 
     .bottom-left {
+        padding: 5px;
+        margin: 5px;
         position:absolute;
         bottom: 0px;
         left: 0px;
     }
 
+    p {
+        margin-bottom: 2px;
+    }
+
+
     .card-main {
         position: relative;
+    }
+
+    .card-main > img {
+        width: 200px
     }
 
     .card-body{
