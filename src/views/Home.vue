@@ -13,17 +13,22 @@
         </div>
       </div>
       <FourCards/>
+      <div class="container">
+        <ThreeItems/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import FourCards from '@/components/fourcards.vue'
+import ThreeItems from '@/components/carousels/threeitems.vue'
 
 export default {
   name: 'Home',
   components: {
-    FourCards
+    FourCards,
+    ThreeItems
   }
 }
 </script>

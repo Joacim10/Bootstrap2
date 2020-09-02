@@ -1,12 +1,20 @@
 <template>
-  <div class="container">
-      Products
+  <div>
+    <div class="container">
+        Products
+    </div>
+    <FourCards/>  
   </div>
 </template>
 
 <script>
-export default {
+import FourCards from '@/components/fourcards.vue'
 
+export default {
+  name: 'Products',
+  components: {
+    FourCards
+  }
 }
 </script>
 
