@@ -3,7 +3,7 @@
     <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList"></div>
     <div class="card-carousel">
       <div class="card-carousel--overflow-container">
-        <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')' }">
+        <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
             <Card class="card-carousel--card" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
         </div>
       </div>
@@ -24,7 +24,7 @@ data() {
     return {
       currentOffset: 0,
       windowSize: 3,
-      paginationFactor: 220,
+      paginationFactor: 34.666,
       items: [
         {name: 'Kin Khao', tag: ["Thai"], previous: '220', price: '190', img: 'Product thumb3.png'},
         {name: 'Jū-Ni', tag: ["Sushi", "Japanese", "$$$$"], previous: '220', price: '190', img: 'Product thumb.png'},
@@ -72,15 +72,17 @@ body {
   justify-content: center;
   margin: 20px 0 40px;
   color: #666a73;
+  width: 100%;
 }
 
 /deep/ .card-carousel {
   display: flex;
   justify-content: center;
-  width: 640px;
+  width: 100%;
 }
 .card-carousel--overflow-container {
   overflow: hidden;
+  width: 100%;
 }
 .card-carousel--nav__left, .card-carousel--nav__right {
   display: inline-block;
@@ -112,19 +114,21 @@ body {
 }
 
 .card-carousel-cards {
+  width: 100%;
   display: flex;
   transition: transform 150ms ease-out;
   transform: translatex(0px);
 }
 /deep/ .card-carousel-cards .card-carousel--card {
-  margin: 0 10px;
+  margin-right: 3.33%;
   cursor: pointer;
   box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06), 0 2px 2px 0 rgba(40, 44, 53, 0.08);
-  background-color: #fff;
   border-radius: 4px;
   z-index: 3;
   margin-bottom: 2px;
+  width: 31.333%;
 }
+
 /deep/ .card-carousel-cards .card-carousel--card:first-child {
   margin-left: 0;
 }

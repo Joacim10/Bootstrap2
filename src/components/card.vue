@@ -1,4 +1,5 @@
 <template>
+<div>
     <div class="card-main">
             <img :src="require(`@/assets/${item.img}`)" alt="">
         <div class="card-original card-body card-carousel--card--footer">
@@ -25,6 +26,8 @@
             </div>
         </div>
     </div>
+</div>
+
 </template>
 
 <script>
@@ -65,11 +68,17 @@ export default {
 
     .card-main {
         position: relative;
+        height: 100%;
+        overflow: hidden;
+        background-color: #EEEEEE;
     }
 
     .card-main > img {
-        width: 200px
-    }
+        object-fit: cover;
+        height: 100%;
+        object-position: center;
+        transform: translateX(-10%);    
+}
 
     .card-body{
         background-color: #0E153D;
