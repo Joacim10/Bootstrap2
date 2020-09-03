@@ -1,6 +1,6 @@
 <template>
     <div class="row mx-2">
-        <div class="col-sm-3">
+        <div class="col-6 col-md-3">
             <div class="card">
                 <div class="d-flex justify-content-between card-body align-items-center">
                     <div class="mr-3">
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-6 col-md-3">
             <div class="card">
                 <div class="d-flex justify-content-between card-body align-items-center">
                     <div class="mr-3">
@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-sm-3 d-none d-md-block">
             <div class="card">
                 <div class="d-flex justify-content-between card-body align-items-center">
                     <div class="mr-3">
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div class="col-sm-3">
+        <div class="col-sm-3 d-none d-md-block">
             <div class="card">
                 <div class="d-flex justify-content-between card-body align-items-center">
                     <div class="mr-3">
