@@ -77,7 +77,7 @@ export default {
         object-fit: cover;
         height: 100%;
         object-position: center;
-        transform: translateX(-10%);    
+        transform: translateX(-0%);    
 }
 
     .card-body{

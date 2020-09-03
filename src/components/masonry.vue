@@ -61,9 +61,6 @@ export default {
     font-weight: bold;
     background-color: #CCCCCC;
     border-radius: 5px;
-    &:nth-child(odd) {
-        background-color: #424242;
-    }
 }
 
 .span-2-2 {

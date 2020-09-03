@@ -26,8 +26,8 @@ data() {
       windowSize: 3,
       paginationFactor: 34.666,
       items: [
-        {name: 'Kin Khao', tag: ["Thai"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Jū-Ni', tag: ["Sushi", "Japanese", "$$$$"], previous: '220', price: '190', img: 'Product thumb.png'},
+        {name: 'Kin Khao', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Jū-Ni', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb.png'},
         {name: 'Delfina', tag: ["Pizza", "Casual"], previous: '220', price: '190', img: 'Product thumb2.png'},
         {name: 'San Tung', tag: ["Chinese", "$$"], previous: '220', price: '190', img: 'Product thumb3.png'},
         {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"], previous: '220', price: '190', img: 'Product thumb.png'},
@@ -169,7 +169,7 @@ body {
   margin-left: 4px;
   color: #666a73;
 }
-/deep/ .card-carousel-cards .card-carousel--card--footer p.tag:before {
+/* /deep/ .card-carousel-cards .card-carousel--card--footer p.tag:before {
   content: "";
   float: left;
   position: absolute;
@@ -180,7 +180,7 @@ body {
   border-color: transparent rgba(40, 44, 53, 0.06) transparent transparent;
   border-style: solid;
   border-width: 8px 12px 12px 0;
-}
+} */
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag.secondary {
   margin-left: 0;
   border-left: 1.45px dashed white;
@@ -188,7 +188,7 @@ body {
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag.secondary:before {
   display: none !important;
 }
-/deep/ .card-carousel-cards .card-carousel--card--footer p.tag:after {
+/* /deep/ .card-carousel-cards .card-carousel--card--footer p.tag:after {
   content: "";
   position: absolute;
   top: 8px;
@@ -199,7 +199,7 @@ body {
   border-radius: 2px;
   background: white;
   box-shadow: -0px -0px 0px #004977;
-}
+} */
 
 h1 {
   font-size: 3.6em;

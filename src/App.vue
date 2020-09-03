@@ -29,6 +29,8 @@ a {
   color: white;
 }
 
-
+ul {
+  list-style-type: none;
+}
 
 </style>
