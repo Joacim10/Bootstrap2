@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <FourCards/>
+    <FourCards class="py-5"/>
 
     <div class="container my-4">
       <div class="text-center">
@@ -34,6 +34,10 @@
         </div>
         <span>We always try to give you the best product within a fast and reliable way</span>
       </div>
+
+      <Masonry/>
+
+
       <div class="text-center">
         <h1 class="">NEW <h1 class="text-info d-inline-block"> ARRIVALS </h1></h1>
         <div class="pb-3">
@@ -44,6 +48,7 @@
       <ThreeItems/>
     </div>
 
+    
 
 
       <div class="bg-grey">
@@ -120,12 +125,14 @@
 <script>
 import FourCards from '@/components/fourcards.vue'
 import ThreeItems from '@/components/carousels/threeitems.vue'
+import Masonry from '@/components/masonry.vue'
 
 export default {
   name: 'Home',
   components: {
     FourCards,
-    ThreeItems
+    ThreeItems,
+    Masonry
   }
 }
 </script>
