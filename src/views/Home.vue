@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div id="carouselExampleSlidesOnly" class="carousel slide mb-4" data-ride="carousel">
+    <div id="carouselWithSlides" class="carousel slide mb-4" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="../assets/Background-1.png" alt="First slide">
@@ -282,6 +282,15 @@ export default {
     font-weight: bold;
     margin-bottom: -10px;
   }
+  #carouselWithSlides {
+    min-height: 453px;
+  }
+
+  .carousel-item > img {
+    min-height: 453px;
+    object-fit: cover;
+  }
+
   #hero {
     position: absolute;
     z-index: +1;
