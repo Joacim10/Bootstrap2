@@ -126,7 +126,7 @@ body {
   border-radius: 4px;
   z-index: 3;
   margin-bottom: 2px;
-  width: 31.333%;
+  min-width: 31.333%;
 }
 
 /deep/ .card-carousel-cards .card-carousel--card:first-child {

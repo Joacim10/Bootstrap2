@@ -1,15 +1,17 @@
 <template>
+<div>
    <div class="card-carousel-wrapper">
     <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList"></div>
     <div class="card-carousel">
       <div class="card-carousel--overflow-container">
         <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
-            <Card class="card-carousel--card" :style="{ width: computedWidth }" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+            <Card class="card-carousel--card" :style="computedWidthAndMargin" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
         </div>
       </div>
     </div>
     <div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList"></div>
   </div>
+</div>
 </template>
 
 <script>
@@ -25,19 +27,21 @@ data() {
     return {
       currentOffset: 0,
       paginationFactor: Number,
-      cardWidth: Number
+      cardWidth: Number,
+      cardMargin: Number
     }
   },
   computed: {
-    computedWidth() {
-      return this.cardWidth;
+    computedWidthAndMargin() {
+      return {
+        "min-width": `${this.cardWidth}%`,
+        "margin-right": `${this.cardMargin}%`
+      };      
     },
     atEndOfList() {
-      console.log(1, this.currentOffset)
       return this.currentOffset <= (this.paginationFactor * -1) * (this.items.length - this.windowSize);
     },
     atHeadOfList() {
-      console.log(2, this.currentOffset)
       return this.currentOffset === 0;
     },
   },
@@ -52,8 +56,9 @@ data() {
     },
   },
   mounted: function() {
-      this.paginationFactor = (100/this.windowSize) + (4/this.windowSize)
-      this.cardWidth = (100/this.windowSize) - (4/this.windowSize)
+      this.cardMargin = 6/this.windowSize
+      this.cardWidth = (100 - (this.cardMargin * (this.windowSize - 1))) / this.windowSize
+      this.paginationFactor = +((this.cardWidth + this.cardMargin).toFixed(2))
       console.log(this.items)
   }
 }
@@ -120,7 +125,7 @@ body {
   transform: translatex(0px);
 }
 /deep/ .card-carousel-cards .card-carousel--card {
-  margin-right: 3.33%;
+  margin-right: 3%;
   cursor: pointer;
   box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06), 0 2px 2px 0 rgba(40, 44, 53, 0.08);
   border-radius: 4px;

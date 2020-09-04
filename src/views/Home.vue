@@ -45,7 +45,11 @@
         </div>
         Check out our latest products from top fashion designers
       </div>
-      <ThreeItems/>
+
+        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
+        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
+        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>  
+
     </div>
 
     
@@ -80,7 +84,9 @@
           </div>
           <span>Check out our monthly featured products from top brands</span>
         </div>
-        <ThreeItems/>
+        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
+        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
+        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>  
       </div>
 
       <div class="bg-dark">
@@ -197,7 +203,9 @@
           <span>Read our latest posts about our events and trending news</span>
         </div>
 
-        <GeneralCarousel :windowSize="4" :items="items"/>
+        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
+        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
+        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>      
       </div>
 
   </div>
@@ -205,7 +213,7 @@
 
 <script>
 import FourCards from '@/components/fourcards.vue'
-import ThreeItems from '@/components/carousels/threeitems.vue'
+//import ThreeItems from '@/components/carousels/threeitems.vue'
 import GeneralCarousel from '@/components/carousels/generalCarousel.vue'
 import Masonry from '@/components/masonry.vue'
 import Card from '@/components/card.vue'
@@ -214,7 +222,6 @@ export default {
   name: 'Home',
   components: {
     FourCards,
-    ThreeItems,
     Masonry,
     Card,
     GeneralCarousel

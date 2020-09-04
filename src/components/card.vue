@@ -69,6 +69,7 @@ export default {
     .card-main {
         position: relative;
         height: 100%;
+        width: 100%;
         overflow: hidden;
         background-color: #EEEEEE;
     }
@@ -76,6 +77,8 @@ export default {
     .card-main > img {
         object-fit: cover;
         height: 100%;
+                width: 100%;
+
         object-position: center;
         transform: translateX(-0%);    
 }
