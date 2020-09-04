@@ -165,9 +165,11 @@
                   <div>
                     <img src="@/assets/stars.png" alt="">
                   </div>
-                  <h2 class="text-info">Johny Wesmullar</h2>
-                  <span class="text-white w-50 d-block">CEO, Biotech Inc.</span>
-                  <span class="text-white w-50 d-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
+                  <h2 class="text-info text-center">Johny Wesmullar</h2>
+                    <span class="text-white">CEO, Biotech Inc.</span>
+                  <div class="d-flex justify-content-center">
+                    <span class="text-white w-50 d-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
+                  </div>
                 </div>
 
               </div>
