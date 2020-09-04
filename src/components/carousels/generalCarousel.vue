@@ -4,7 +4,7 @@
     <div class="card-carousel">
       <div class="card-carousel--overflow-container">
         <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
-            <Card class="card-carousel--card" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+            <Card class="card-carousel--card" :style="{ width: computedWidth }" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
         </div>
       </div>
     </div>
@@ -20,23 +20,18 @@ export default {
   components: {
     Card
   },
+  props: ['windowSize', 'items'],  
 data() {
     return {
       currentOffset: 0,
-      windowSize: 3,
-      paginationFactor: 34.666,
-      items: [
-        {name: 'Kin Khao', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Jū-Ni', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb.png'},
-        {name: 'Delfina', tag: ["Pizza", "Casual"], previous: '220', price: '190', img: 'Product thumb2.png'},
-        {name: 'San Tung', tag: ["Chinese", "$$"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"], previous: '220', price: '190', img: 'Product thumb.png'},
-        {name: 'Locanda', tag: ["Italian"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Garden Creamery', tag: ["Ice cream"], previous: '220', price: '190', img: 'Product thumb.png'},
-      ]
+      paginationFactor: Number,
+      cardWidth: Number
     }
   },
   computed: {
+    computedWidth() {
+      return this.cardWidth;
+    },
     atEndOfList() {
       console.log(1, this.currentOffset)
       return this.currentOffset <= (this.paginationFactor * -1) * (this.items.length - this.windowSize);
@@ -55,6 +50,11 @@ data() {
         this.currentOffset += this.paginationFactor;
       }
     },
+  },
+  mounted: function() {
+      this.paginationFactor = (100/this.windowSize) + (4/this.windowSize)
+      this.cardWidth = (100/this.windowSize) - (4/this.windowSize)
+      console.log(this.items)
   }
 }
 </script>
@@ -126,8 +126,8 @@ body {
   border-radius: 4px;
   z-index: 3;
   margin-bottom: 2px;
-  width: 31.333%;
-}
+/*   width: 31.333%;
+ */}
 
 /deep/ .card-carousel-cards .card-carousel--card:first-child {
   margin-left: 0;

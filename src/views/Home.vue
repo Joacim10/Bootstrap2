@@ -197,7 +197,7 @@
           <span>Read our latest posts about our events and trending news</span>
         </div>
 
-        
+        <GeneralCarousel :windowSize="4" :items="items"/>
       </div>
 
   </div>
@@ -206,6 +206,7 @@
 <script>
 import FourCards from '@/components/fourcards.vue'
 import ThreeItems from '@/components/carousels/threeitems.vue'
+import GeneralCarousel from '@/components/carousels/generalCarousel.vue'
 import Masonry from '@/components/masonry.vue'
 import Card from '@/components/card.vue'
 
@@ -215,7 +216,8 @@ export default {
     FourCards,
     ThreeItems,
     Masonry,
-    Card
+    Card,
+    GeneralCarousel
   },
   data: function () {
     return {
@@ -225,6 +227,15 @@ export default {
         {name: 'Jū-Ni', tag: ["Women's leather bag and shoe"], previous: '220', price: '190', img: 'Product thumb5.png'},
     item3: 
         {name: 'Delfina', tag: ["New look men's sneakers"], previous: '220', price: '190', img: 'Product thumb6.png'},
+    items: [
+        {name: 'Kin Khao', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Jū-Ni', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb.png'},
+        {name: 'Delfina', tag: ["Pizza", "Casual"], previous: '220', price: '190', img: 'Product thumb2.png'},
+        {name: 'San Tung', tag: ["Chinese", "$$"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"], previous: '220', price: '190', img: 'Product thumb.png'},
+        {name: 'Locanda', tag: ["Italian"], previous: '220', price: '190', img: 'Product thumb3.png'},
+        {name: 'Garden Creamery', tag: ["Ice cream"], previous: '220', price: '190', img: 'Product thumb.png'},
+      ]
     }
   }
 
