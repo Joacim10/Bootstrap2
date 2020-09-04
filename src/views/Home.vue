@@ -143,10 +143,10 @@
       </div>
     </div>
 
-      <div class="bg-dark">
+      <div class="bg-dark my-5">
         <div class="container">
           
-          <div id="carouselExampleIndicators" class="carousel slide my-5" data-interval="false" data-ride="carousel">
+          <div id="carouselExampleIndicators" class="carousel slide pb-5" data-interval="false" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -171,15 +171,6 @@
                     <span class="text-white w-50 d-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
                   </div>
                 </div>
-
-              </div>
-              <div class="carousel-item">
-
-                på
-              </div>
-              <div class="carousel-item">
-                dig
-
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -192,8 +183,21 @@
             </a>
           </div>
 
-
+            <div class="pb-5"></div>
+            <div class="pb-5"></div>
         </div>
+      </div>
+
+      <div class="container">
+        <div class="text-center">
+          <h1 class="d-inline-block">LATEST <h1 class="text-info d-inline-block"> BLOG </h1></h1>
+          <div class="pb-3">
+            <img class="" src="@/assets/curlyrow.png" alt="">
+          </div>
+          <span>Read our latest posts about our events and trending news</span>
+        </div>
+
+        
       </div>
 
   </div>
