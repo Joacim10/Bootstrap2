@@ -203,9 +203,8 @@
           <span>Read our latest posts about our events and trending news</span>
         </div>
 
-        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
-        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
-        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>      
+        <blogCarousel class="d-sm-none" :windowSize="1" :items="items"/>
+        <blogCarousel class="d-none d-sm-block" :windowSize="2" :items="items"/>
       </div>
 
   </div>
@@ -217,6 +216,7 @@ import FourCards from '@/components/fourcards.vue'
 import GeneralCarousel from '@/components/carousels/generalCarousel.vue'
 import Masonry from '@/components/masonry.vue'
 import Card from '@/components/card.vue'
+import blogCarousel from  '@/components/carousels/blogCarousel.vue'
 
 export default {
   name: 'Home',
@@ -224,7 +224,8 @@ export default {
     FourCards,
     Masonry,
     Card,
-    GeneralCarousel
+    GeneralCarousel,
+    blogCarousel
   },
   data: function () {
     return {
