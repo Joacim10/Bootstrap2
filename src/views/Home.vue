@@ -209,13 +209,28 @@
         <blogCarousel class="d-none d-sm-flex" :windowSize="2" :items="items"/>
       </div>
 
-      <div>
+      <div class="bg-light-grey my-4">
         <div class="container d-flex justify-content-between">
-          <div>
-            <h1 class="d-inline-block">SUBSCRIBE <h1 class="text-info d-inline-block"> NOW </h1></h1>
+          <div class="my-5">
+            <h2 class="d-inline-block">SUBSCRIBE <h2 class="text-info d-inline-block"> NOW </h2></h2>
+            <p class="w-75">Signup for awesome news about our new products and know our special discounts on products.</p>
+            <form action="">
+              <input class="" type="text">
+              <button class="btn rounded btn-info">SUBSCRIBE</button>
+            </form>
           </div>
           <div class="bg-grey w-50">
           </div>
+        </div>
+      </div>
+
+      <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <img src="@/assets/Bexim.png" alt="">
+          <img src="@/assets/Lighton.png" alt="">
+          <img src="@/assets/Dismis.png" alt="">
+          <img src="@/assets/Rosimo.png" alt="">
+          <img src="@/assets/Dallas.png" alt="">
         </div>
       </div>
 
@@ -226,7 +241,6 @@
 
 <script>
 import FourCards from '@/components/fourcards.vue'
-//import ThreeItems from '@/components/carousels/threeitems.vue'
 import GeneralCarousel from '@/components/carousels/generalCarousel.vue'
 import Masonry from '@/components/masonry.vue'
 import Card from '@/components/card.vue'
@@ -265,6 +279,7 @@ export default {
 </script>
 
 <style scoped>
+
   .home {
     height: 4000px;
   }
@@ -277,6 +292,9 @@ export default {
   }
   .bg-grey {
     background-color: #CCCCCC;
+  }
+  .bg-light-grey {
+    background-color: #F6F6F6;
   }
   .rounded {
     margin: 20px;
