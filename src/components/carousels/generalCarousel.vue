@@ -1,7 +1,11 @@
 <template>
 <div>
    <div class="card-carousel-wrapper">
-    <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList"></div>
+    <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList">
+      <div class="position-relative">
+        <img src="@/assets/Previous btn.png" alt="">
+      </div>
+    </div>
     <div class="card-carousel">
       <div class="card-carousel--overflow-container">
         <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
@@ -9,7 +13,11 @@
         </div>
       </div>
     </div>
-    <div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList"></div>
+    <div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList">
+      <div class="position-relative">
+        <img src="@/assets/Next btn.png" alt="">
+      </div>
+    </div>
   </div>
 </div>
 </template>
@@ -72,6 +80,7 @@ body {
 }
 
 .card-carousel-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,34 +98,66 @@ body {
   overflow: hidden;
   width: 100%;
 }
+.card-carousel--nav__left {
+  left: -45px;
+}
+
+.card-carousel--nav__right {
+  right: -45px;
+}
+
 .card-carousel--nav__left, .card-carousel--nav__right {
+  position: absolute;
+  z-index: +1;
   display: inline-block;
   width: 15px;
   height: 15px;
-  padding: 10px;
-  box-sizing: border-box;
-  border-top: 2px solid #42b883;
-  border-right: 2px solid #42b883;
+  padding: 20px;
   cursor: pointer;
-  margin: 0 20px;
   transition: transform 150ms linear;
+  background-color: #20D3C2;
+  border-radius: 50%;
+  border: 2px solid #20D3C2;
 }
+
+.card-carousel--nav__right > div {
+  width: 30px;
+  height: 30px;
+}
+
+.card-carousel--nav__right > div > img {
+  position: absolute;
+  top: -35%;
+  left: -15%;
+  height: 70%;
+  width: auto;
+}
+
+.card-carousel--nav__left > div {
+  width: 30px;
+  height: 30px;
+}
+
+.card-carousel--nav__left > div > img {
+  position: absolute;
+  top: -35%;
+  left: -20%;
+  height: 70%;
+  width: auto;
+}
+
+
 .card-carousel--nav__left[disabled], .card-carousel--nav__right[disabled] {
-  opacity: 0.2;
-  border-color: black;
+  opacity: 1;
+  background-color: white;
+  border-color: #e9e4e4;
+  
 }
-.card-carousel--nav__left {
-  transform: rotate(-135deg);
+
+.card-carousel--nav__left[disabled] > div > img, .card-carousel--nav__right[disabled] > div > img {
+  filter: invert(10%);
 }
-.card-carousel--nav__left:active {
-  transform: rotate(-135deg) scale(0.9);
-}
-.card-carousel--nav__right {
-  transform: rotate(45deg);
-}
-.card-carousel--nav__right:active {
-  transform: rotate(45deg) scale(0.9);
-}
+
 
 .card-carousel-cards {
   width: 100%;
@@ -131,8 +172,7 @@ body {
   border-radius: 4px;
   z-index: 3;
   margin-bottom: 2px;
-/*   width: 31.333%;
- */}
+}
 
 /deep/ .card-carousel-cards .card-carousel--card:first-child {
   margin-left: 0;
@@ -174,18 +214,7 @@ body {
   margin-left: 4px;
   color: #666a73;
 }
-/* /deep/ .card-carousel-cards .card-carousel--card--footer p.tag:before {
-  content: "";
-  float: left;
-  position: absolute;
-  top: 0;
-  left: -12px;
-  width: 0;
-  height: 0;
-  border-color: transparent rgba(40, 44, 53, 0.06) transparent transparent;
-  border-style: solid;
-  border-width: 8px 12px 12px 0;
-} */
+
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag.secondary {
   margin-left: 0;
   border-left: 1.45px dashed white;
@@ -193,18 +222,6 @@ body {
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag.secondary:before {
   display: none !important;
 }
-/* /deep/ .card-carousel-cards .card-carousel--card--footer p.tag:after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: -3px;
-  float: left;
-  width: 4px;
-  height: 4px;
-  border-radius: 2px;
-  background: white;
-  box-shadow: -0px -0px 0px #004977;
-} */
 
 h1 {
   font-size: 3.6em;

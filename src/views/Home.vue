@@ -46,7 +46,9 @@
         Check out our latest products from top fashion designers
       </div>
 
-        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
+        <div class="container">
+          <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
+        </div>
         <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
         <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>  
 
@@ -204,8 +206,20 @@
         </div>
 
         <blogCarousel class="d-sm-none" :windowSize="1" :items="items"/>
-        <blogCarousel class="d-none d-sm-block" :windowSize="2" :items="items"/>
+        <blogCarousel class="d-none d-sm-flex" :windowSize="2" :items="items"/>
       </div>
+
+      <div>
+        <div class="container d-flex justify-content-between">
+          <div>
+            <h1 class="d-inline-block">SUBSCRIBE <h1 class="text-info d-inline-block"> NOW </h1></h1>
+          </div>
+          <div class="bg-grey w-50">
+          </div>
+        </div>
+      </div>
+
+
 
   </div>
 </template>

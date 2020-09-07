@@ -33,4 +33,20 @@ ul {
   list-style-type: none;
 }
 
+.bg-info {
+  background: #20D3C2 !important;
+}
+
+.text-info {
+  color: #20D3C2 !important;
+}
+
+.btn-info {
+  background: #20D3C2 !important;
+}
+
+.badge-info {
+  background: #20D3C2 !important;
+}
+
 </style>
