@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import FourCards from '@/components/fourcards.vue'
+import FourCards from '@/components/fourCards.vue'
 
 export default {
   name: 'Products',

@@ -240,7 +240,7 @@
 </template>
 
 <script>
-import FourCards from '@/components/fourcards.vue'
+import FourCards from '@/components/fourCards.vue'
 import GeneralCarousel from '@/components/carousels/generalCarousel.vue'
 import Masonry from '@/components/masonry.vue'
 import Card from '@/components/card.vue'
@@ -280,12 +280,8 @@ export default {
 
 <style scoped>
 
-  .home {
-    height: 4000px;
-  }
-  .bg-dark {
-    background-color: #0E153D !important;
-  }
+
+
 
   .btn-dark {
     background-color: #0E153D;

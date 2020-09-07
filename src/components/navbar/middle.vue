@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-white mt-3 mb-lg-3">
         <div class="container d-flex justify-content-between">  
-            <a class="navbar-brand" href="#"><img src="../../assets/logo.png" alt="picture"></a>
+            <Logo/>
 
             <form class="form-inline my-lg-0 rounded">
                 <div class="input-group">
@@ -66,8 +66,12 @@
 </template>
 
 <script>
-export default {
+import Logo from '@/components/elements/logo.vue'
 
+export default {
+    components: {
+        Logo
+    }
 }
 </script>
 
