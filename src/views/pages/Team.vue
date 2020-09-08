@@ -1,10 +1,15 @@
 <template>
-  
+      <Subscribe/> 
+
 </template>
 
 <script>
-export default {
+import Subscribe from  '@/components/elements/subscribe.vue'
 
+export default {
+  components: {
+    Subscribe
+  }
 }
 </script>
 

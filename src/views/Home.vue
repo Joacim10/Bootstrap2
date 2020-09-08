@@ -209,32 +209,7 @@
         <blogCarousel class="d-none d-sm-flex" :windowSize="2" :items="items"/>
       </div>
 
-      <div class="bg-light-grey my-4">
-        <div class="container d-flex justify-content-between">
-          <div class="my-5">
-            <h2 class="d-inline-block">SUBSCRIBE <h2 class="text-info d-inline-block"> NOW </h2></h2>
-            <p class="w-75">Signup for awesome news about our new products and know our special discounts on products.</p>
-            <form action="">
-              <input class="" type="text">
-              <button class="btn rounded btn-info">SUBSCRIBE</button>
-            </form>
-          </div>
-          <div class="bg-grey w-50">
-          </div>
-        </div>
-      </div>
-
-      <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
-          <img src="@/assets/Bexim.png" alt="">
-          <img src="@/assets/Lighton.png" alt="">
-          <img src="@/assets/Dismis.png" alt="">
-          <img src="@/assets/Rosimo.png" alt="">
-          <img src="@/assets/Dallas.png" alt="">
-        </div>
-      </div>
-
-
+    <Subscribe/>
 
   </div>
 </template>
@@ -245,6 +220,7 @@ import GeneralCarousel from '@/components/carousels/generalCarousel.vue'
 import Masonry from '@/components/masonry.vue'
 import Card from '@/components/card.vue'
 import blogCarousel from  '@/components/carousels/blogCarousel.vue'
+import Subscribe from  '@/components/elements/subscribe.vue'
 
 export default {
   name: 'Home',
@@ -253,7 +229,8 @@ export default {
     Masonry,
     Card,
     GeneralCarousel,
-    blogCarousel
+    blogCarousel,
+    Subscribe
   },
   data: function () {
     return {

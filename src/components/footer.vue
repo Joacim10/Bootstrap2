@@ -1,5 +1,14 @@
 <template>
 <div>
+        <div class="container my-5">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+          <img src="@/assets/Bexim.png" alt="">
+          <img src="@/assets/Lighton.png" alt="">
+          <img src="@/assets/Dismis.png" alt="">
+          <img src="@/assets/Rosimo.png" alt="">
+          <img src="@/assets/Dallas.png" alt="">
+        </div>
+      </div>
 
   <div class="background">
     <div class="container">

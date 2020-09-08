@@ -3,17 +3,20 @@
     <div class="container">
         Products
     </div>
-    <FourCards/>  
+    <FourCards/> 
+    <Subscribe/> 
   </div>
 </template>
 
 <script>
 import FourCards from '@/components/fourCards.vue'
+import Subscribe from  '@/components/elements/subscribe.vue'
 
 export default {
   name: 'Products',
   components: {
-    FourCards
+    FourCards,
+    Subscribe
   }
 }
 </script>
