@@ -162,7 +162,7 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active text-center">
-                <div class="my-5 text-center">
+                <div class="mb-5 text-center">
                   <div>
                     <img src="@/assets/Quote.png" alt="">
                   </div>
