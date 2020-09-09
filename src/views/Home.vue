@@ -46,9 +46,7 @@
         Check out our latest products from top fashion designers
       </div>
 
-        <div class="container">
-          <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
-        </div>
+        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
         <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
         <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>  
 
@@ -68,7 +66,7 @@
               </div>
             </div>
             <div class="col-12 col-sm-6 d-flex justify-content-center flex-column my-3">
-              <span class="small pr-5 mr-5">Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra scelerisque purus. Nam pretium iaculis ultrices.</span>
+              <span class="small pr-lg-5 mr-lg-5">Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra scelerisque purus. Nam pretium iaculis ultrices.</span>
               <div>
                 <button class="btn btn-light text-info ml-0 rounded">SHOP NOW</button>
               </div>
@@ -103,20 +101,20 @@
             </div>
             <div class="col-12 col-lg-9 d-flex justify-content-center flex-column my-lg-5">
               <div class="text-center ml-lg-auto">
-                <div class="d-flex justify-content-lg-end justify-content-center">
-                  <div class="d-flex flex-column justify-content-center round bg-white align-items-center">
+                <div class="d-flex justify-content-lg-end justify-content-center flex-wrap">
+                  <div class="d-flex m-1  flex-column justify-content-center round bg-white align-items-center">
                     <div class="text-info numbers">7</div>
                     <div class="text-dark">Days</div>
                   </div>
-                  <div class="d-flex ml-3 flex-column justify-content-center round bg-white align-items-center">
+                  <div class="d-flex m-1 flex-column justify-content-center round bg-white align-items-center">
                     <div class="text-info numbers">23</div>
                     <div class="text-dark">Hays</div>
                   </div>
-                  <div class="d-flex ml-3 flex-column justify-content-center round bg-white align-items-center">
+                  <div class="d-flex m-1 flex-column justify-content-center round bg-white align-items-center">
                     <div class="text-info numbers">46</div>
                     <div class="text-dark">Minutes</div>
                   </div>
-                  <div class="d-flex ml-3 flex-column justify-content-center round bg-white align-items-center">
+                  <div class="d-flex m-1 flex-column justify-content-center round bg-white align-items-center">
                     <div class="text-info numbers">12</div>
                     <div class="text-dark">Seconds</div>
                   </div>
@@ -278,7 +276,7 @@ export default {
     height: 109px;
   }
   .big-text {
-    font-size: 60px;
+    font-size: 40px;
     font-family: Play;
   }
   .numbers {
@@ -310,10 +308,22 @@ export default {
     left: 0px;
     width: 100%
   }
-  #span-hero{
-    width: 35%;
+    #span-hero{
     display: block;
     font-size: 1rem;
 
   }
+
+
+  @media only screen and (min-width: 576px) {
+    .big-text {
+      font-size: 60px;
+      font-family: Play;
+    }
+    #span-hero{
+      width: 35%;
+    }
+  }
+
+
 </style>

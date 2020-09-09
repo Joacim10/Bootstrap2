@@ -5,7 +5,7 @@
     </ol>
 
     <div class="card-carousel-wrapper">
-      <div class="card-carousel--nav__left" @click="moveCarousel(-1, 0)" :disabled="atHeadOfList">
+      <div class="card-carousel--nav__left d-none d-sm-block" @click="moveCarousel(-1, 0)" :disabled="atHeadOfList">
         <div class="position-relative">
           <img src="@/assets/Previous btn.png" alt="">
         </div>
@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="card-carousel--nav__right" @click="moveCarousel(1, 0)" :disabled="atEndOfList">
+      <div class="card-carousel--nav__right d-none d-sm-block" @click="moveCarousel(1, 0)" :disabled="atEndOfList">
         <div class="position-relative">
           <img src="@/assets/Next btn.png" alt="">
         </div>

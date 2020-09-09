@@ -90,7 +90,7 @@
     <div class="container">
       <div class="d-flex justify-content-between py-3">
         <div>© Copyright 2020 KenKata</div>
-        <div><img src="@/assets/Payment system.png" alt=""></div>
+        <div class="d-none d-md-block"><img src="@/assets/Payment system.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -134,5 +134,12 @@ ul > li {
 .h-100 {
   min-height: 82px;
 }
+
+@media only screen and (max-width: 360px) {
+  .f-16{
+    font-size: 14px;
+  }
+}
+
 
 </style>

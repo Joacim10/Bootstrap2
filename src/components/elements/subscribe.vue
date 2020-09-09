@@ -1,15 +1,15 @@
 <template>
     <div class="bg-light-grey my-4">
-        <div class="container d-flex justify-content-between">
+        <div class="container d-flex justify-content-between text-center text-md-left">
             <div class="my-5">
-            <h2 class="d-inline-block">SUBSCRIBE <h2 class="text-info d-inline-block"> NOW </h2></h2>
-            <p class="w-75">Signup for awesome news about our new products and know our special discounts on products.</p>
-            <form action="">
-                <input class="" type="text">
-                <button class="btn rounded btn-info">SUBSCRIBE</button>
-            </form>
+                <h2 class="d-inline-block">SUBSCRIBE <h2 class="text-info d-inline-block"> NOW </h2></h2>
+                <p class="w-md-75">Signup for awesome news about our new products and know our special discounts on products.</p>
+                <form action="">
+                    <input class="" type="text">
+                    <button class="btn rounded btn-info">SUBSCRIBE</button>
+                </form>
             </div>
-            <div class="bg-grey w-50">
+            <div class="d-none d-md-block bg-grey w-100">
             </div>
         </div>
     </div>
