@@ -1,11 +1,11 @@
 <template>
 <div>
     <div class="card-main">
-            <img :src="require(`@/assets/${item.img}`)" alt="">
+        <img :src="require(`@/assets/${item.img}`)" alt="">
         <div class="card-original card-body card-carousel--card--footer">
-                <p class="tag" v-for="(tag,index) in item.tag" :key="tag" :class="index &gt; 0 ? 'secondary' : ''">{{ item.tag[index] }}</p>
+            <p class="tag" v-for="(tag,index) in item.tag" :key="tag" :class="index &gt; 0 ? 'secondary' : ''">{{ item.tag[index] }}</p>
         </div>
-        <div class="card-hover d-none card-body">
+        <div class="card-hover card-body">
             <div class="top-right">
                 <i class="my-1 fas fa-circle text-danger"></i>
                 <i class="my-1 fas fa-heart"></i>
@@ -77,8 +77,7 @@ export default {
     .card-main > img {
         object-fit: cover;
         height: 100%;
-                width: 100%;
-
+        width: 100%;
         object-position: center;
         transform: translateX(-0%);    
 }
@@ -95,8 +94,9 @@ export default {
     }
 
     .card-hover {
+        transition: bottom 0.3s ease;
+        bottom: -100%;
         opacity: 0.9;
-        bottom: 0px;
         height: 100%;
         width: 100%;
     }
@@ -105,6 +105,7 @@ export default {
         display: none;
     }
     .card-main:hover > .card-hover {
+        bottom: 0;
         display: block !important;
     }
 

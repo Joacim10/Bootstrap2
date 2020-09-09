@@ -1,12 +1,25 @@
 <template>
 <div>
         <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center flex-wrap">
+        <div class="d-none d-lg-flex justify-content-between align-items-center flex-wrap">
           <img src="@/assets/Bexim.png" alt="">
           <img src="@/assets/Lighton.png" alt="">
           <img src="@/assets/Dismis.png" alt="">
           <img src="@/assets/Rosimo.png" alt="">
           <img src="@/assets/Dallas.png" alt="">
+        </div>
+        <div class="d-lg-none row">
+          <div class="col-12 text-center">
+            <img class="pr-5" src="@/assets/Bexim.png" alt="">
+            <img src="@/assets/Lighton.png" alt="">
+          </div>
+          <div class="col-12 text-center">
+            <img class="pr-5 py-2" src="@/assets/Dismis.png" alt="">
+            <img src="@/assets/Rosimo.png" alt="">
+          </div>
+          <div class="col-12 text-center" >
+            <img src="@/assets/Dallas.png" alt="">
+          </div>
         </div>
       </div>
 

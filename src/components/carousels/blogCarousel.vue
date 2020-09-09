@@ -1,30 +1,33 @@
 <template>
-<div>
-   <div class="card-carousel-wrapper">
-    <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList">
-      <div class="position-relative">
-        <img src="@/assets/Previous btn.png" alt="">
-      </div>
-    </div>
-    <div class="card-carousel">
-      <div class="card-carousel--overflow-container">
-        <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
-            <blogCard class="card-carousel--card" :style="computedWidthAndMargin" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+<div id="carousel" class="position-relative">
+    <ol id="carousel-indicators" class="carousel-indicators">
+      <li v-for="(item, index) in (items.slice(0, numberOfIndicators))" :key="index"  @click="moveCarousel(0, index)" class="indicator" :class="{ 'active' : index == activeIndicator}"></li>
+    </ol>
+
+    <div class="card-carousel-wrapper">
+      <div class="card-carousel--nav__left" @click="moveCarousel(-1, 0)" :disabled="atHeadOfList">
+        <div class="position-relative">
+          <img src="@/assets/Previous btn.png" alt="">
         </div>
       </div>
-    </div>
-    <div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList">
-      <div class="position-relative">
-        <img src="@/assets/Next btn.png" alt="">
+      <div class="card-carousel">
+        <div class="card-carousel--overflow-container">
+          <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
+            <blogCard class="card-carousel--card" :style="computedWidthAndMargin" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="card-carousel--nav__right" @click="moveCarousel(1, 0)" :disabled="atEndOfList">
+        <div class="position-relative">
+          <img src="@/assets/Next btn.png" alt="">
+        </div>
+      </div>
   </div>
 </div>
 </template>
 
 <script>
 import blogCard from '@/components/blogCard.vue'
-
 
 export default {
   components: {
@@ -36,7 +39,9 @@ data() {
       currentOffset: 0,
       paginationFactor: Number,
       cardWidth: Number,
-      cardMargin: Number
+      cardMargin: Number,
+      numberOfIndicators: Number,
+      activeIndicator: 0
     }
   },
   computed: {
@@ -54,20 +59,23 @@ data() {
     },
   },
   methods: {
-    moveCarousel(direction) {
+    moveCarousel(direction, position) {
       // Find a more elegant way to express the :style. consider using props to make it truly generic
       if (direction === 1 && !this.atEndOfList) {
         this.currentOffset -= this.paginationFactor;
       } else if (direction === -1 && !this.atHeadOfList) {
         this.currentOffset += this.paginationFactor;
+      } else if (direction === 0) {
+        this.currentOffset = -(position * this.paginationFactor);
       }
-    },
+      this.activeIndicator = -this.currentOffset / this.paginationFactor
+    }
   },
   mounted: function() {
       this.cardMargin = 6/this.windowSize
       this.cardWidth = (100 - (this.cardMargin * (this.windowSize - 1))) / this.windowSize
       this.paginationFactor = +((this.cardWidth + this.cardMargin).toFixed(2))
-      console.log(this.items)
+      this.numberOfIndicators = Object.keys(this.items).length - (this.windowSize -1)
   }
 }
 </script>
@@ -84,7 +92,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0 40px;
+  margin: 20px 0 0px;
   color: #666a73;
   width: 100%;
 }
@@ -181,6 +189,7 @@ body {
   filter: invert(10%);
 }
 
+
 .card-carousel-cards {
   width: 100%;
   display: flex;
@@ -190,7 +199,6 @@ body {
 /deep/ .card-carousel-cards .card-carousel--card {
   margin-right: 3%;
   cursor: pointer;
-  box-shadow: 0 4px 15px 0 rgba(40, 44, 53, 0.06), 0 2px 2px 0 rgba(40, 44, 53, 0.08);
   border-radius: 4px;
   z-index: 3;
   margin-bottom: 2px;
@@ -243,6 +251,22 @@ body {
 }
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag.secondary:before {
   display: none !important;
+}
+
+#carousel-indicators {
+  bottom: -30px;
+  margin: 0;
+}
+
+#carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: grey;
+}
+
+#carousel-indicators > .active {
+  background-color: #20D3C2;
 }
 
 h1 {

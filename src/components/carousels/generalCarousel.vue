@@ -1,27 +1,27 @@
 <template>
 <div id="carousel" class="position-relative">
-    <ol class="carousel-indicators">
-      <li v-for="(item, index) in (items.slice(0, numberOfIndicators))" :key="index"  @click="moveCarousel(0, index)" class="active"></li>
+    <ol id="carousel-indicators" class="carousel-indicators">
+      <li v-for="(item, index) in (items.slice(0, numberOfIndicators))" :key="index"  @click="moveCarousel(0, index)" class="indicator" :class="{ 'active' : index == activeIndicator}"></li>
     </ol>
 
     <div class="card-carousel-wrapper">
-    <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList">
-      <div class="position-relative">
-        <img src="@/assets/Previous btn.png" alt="">
-      </div>
-    </div>
-    <div class="card-carousel">
-      <div class="card-carousel--overflow-container">
-        <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
-            <Card class="card-carousel--card" :style="computedWidthAndMargin" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+      <div class="card-carousel--nav__left" @click="moveCarousel(-1, 0)" :disabled="atHeadOfList">
+        <div class="position-relative">
+          <img src="@/assets/Previous btn.png" alt="">
         </div>
       </div>
-    </div>
-    <div class="card-carousel--nav__right" @click="moveCarousel(1)" :disabled="atEndOfList">
-      <div class="position-relative">
-        <img src="@/assets/Next btn.png" alt="">
+      <div class="card-carousel">
+        <div class="card-carousel--overflow-container">
+          <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
+              <Card class="card-carousel--card" :style="computedWidthAndMargin" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="card-carousel--nav__right" @click="moveCarousel(1, 0)" :disabled="atEndOfList">
+        <div class="position-relative">
+          <img src="@/assets/Next btn.png" alt="">
+        </div>
+      </div>
   </div>
 </div>
 </template>
@@ -41,7 +41,8 @@ data() {
       paginationFactor: Number,
       cardWidth: Number,
       cardMargin: Number,
-      numberOfIndicators: Number
+      numberOfIndicators: Number,
+      activeIndicator: 0
     }
   },
   computed: {
@@ -65,10 +66,11 @@ data() {
         this.currentOffset -= this.paginationFactor;
       } else if (direction === -1 && !this.atHeadOfList) {
         this.currentOffset += this.paginationFactor;
-      } else {
+      } else if (direction === 0) {
         this.currentOffset = -(position * this.paginationFactor);
       }
-    },
+      this.activeIndicator = -this.currentOffset / this.paginationFactor
+    }
   },
   mounted: function() {
       this.cardMargin = 6/this.windowSize
@@ -253,9 +255,20 @@ body {
   display: none !important;
 }
 
-.carousel-indicators {
-  bottom: -10px;
+#carousel-indicators {
+  bottom: -30px;
   margin: 0;
+}
+
+#carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: grey;
+}
+
+#carousel-indicators > .active {
+  background-color: #20D3C2;
 }
 
 h1 {

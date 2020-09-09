@@ -205,9 +205,10 @@
           </div>
           <span>Read our latest posts about our events and trending news</span>
         </div>
-
-        <blogCarousel class="d-sm-none" :windowSize="1" :items="items"/>
-        <blogCarousel class="d-none d-sm-flex" :windowSize="2" :items="items"/>
+        <div class="pb-5">
+          <blogCarousel class="d-lg-none" :windowSize="1" :items="items"/>
+          <blogCarousel class="d-none d-lg-flex" :windowSize="2" :items="items"/>
+        </div>
       </div>
 
     <Subscribe/>
@@ -257,9 +258,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-
 
   .btn-dark {
     background-color: #0E153D;
