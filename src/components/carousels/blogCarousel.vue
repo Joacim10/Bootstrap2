@@ -100,11 +100,11 @@ body {
 }
 
 .card-carousel--nav__left {
-  left: -45px;
+  left: -25px;
 }
 
 .card-carousel--nav__right {
-  right: -45px;
+  right: -25px;
 }
 
 .card-carousel--nav__left, .card-carousel--nav__right {
@@ -113,16 +113,17 @@ body {
   display: inline-block;
   width: 15px;
   height: 15px;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   transition: transform 150ms linear;
   background-color: #20D3C2;
   border-radius: 50%;
   border: 2px solid #20D3C2;
 }
-.card-carousel--nav__right > div {
-  width: 30px;
-  height: 30px;
+
+.card-carousel--nav__right > div, .card-carousel--nav__left > div {
+  width: 15px;
+  height: 15px;
 }
 
 .card-carousel--nav__right > div > img {
@@ -133,17 +134,39 @@ body {
   width: auto;
 }
 
-.card-carousel--nav__left > div {
-  width: 30px;
-  height: 30px;
-}
-
 .card-carousel--nav__left > div > img {
   position: absolute;
   top: -35%;
   left: -20%;
-  height: 70%;
+  height: 40%;
   width: auto;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .card-carousel--nav__left, .card-carousel--nav__right {
+    padding: 20px;
+  }
+  .card-carousel--nav__left > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-carousel--nav__left > div > img {
+    position: absolute;
+    top: -35%;
+    left: -20%;
+    height: 70%;
+    width: auto;
+  }
+
+  .card-carousel--nav__left {
+    left: -45px;
+  }
+
+  .card-carousel--nav__right {
+    right: -45px;
+  }
 }
 
 

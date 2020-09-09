@@ -1,6 +1,10 @@
 <template>
-<div>
-   <div class="card-carousel-wrapper">
+<div id="carousel" class="position-relative">
+    <ol class="carousel-indicators">
+      <li v-for="(item, index) in (items.slice(0, numberOfIndicators))" :key="index"  @click="moveCarousel(0, index)" class="active"></li>
+    </ol>
+
+    <div class="card-carousel-wrapper">
     <div class="card-carousel--nav__left" @click="moveCarousel(-1)" :disabled="atHeadOfList">
       <div class="position-relative">
         <img src="@/assets/Previous btn.png" alt="">
@@ -36,7 +40,8 @@ data() {
       currentOffset: 0,
       paginationFactor: Number,
       cardWidth: Number,
-      cardMargin: Number
+      cardMargin: Number,
+      numberOfIndicators: Number
     }
   },
   computed: {
@@ -54,12 +59,14 @@ data() {
     },
   },
   methods: {
-    moveCarousel(direction) {
+    moveCarousel(direction, position) {
       // Find a more elegant way to express the :style. consider using props to make it truly generic
       if (direction === 1 && !this.atEndOfList) {
         this.currentOffset -= this.paginationFactor;
       } else if (direction === -1 && !this.atHeadOfList) {
         this.currentOffset += this.paginationFactor;
+      } else {
+        this.currentOffset = -(position * this.paginationFactor);
       }
     },
   },
@@ -67,7 +74,7 @@ data() {
       this.cardMargin = 6/this.windowSize
       this.cardWidth = (100 - (this.cardMargin * (this.windowSize - 1))) / this.windowSize
       this.paginationFactor = +((this.cardWidth + this.cardMargin).toFixed(2))
-      console.log(this.items)
+      this.numberOfIndicators = Object.keys(this.items).length - (this.windowSize -1)
   }
 }
 </script>
@@ -98,12 +105,13 @@ body {
   overflow: hidden;
   width: 100%;
 }
+
 .card-carousel--nav__left {
-  left: -45px;
+  left: -25px;
 }
 
 .card-carousel--nav__right {
-  right: -45px;
+  right: -25px;
 }
 
 .card-carousel--nav__left, .card-carousel--nav__right {
@@ -112,7 +120,7 @@ body {
   display: inline-block;
   width: 15px;
   height: 15px;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   transition: transform 150ms linear;
   background-color: #20D3C2;
@@ -120,9 +128,9 @@ body {
   border: 2px solid #20D3C2;
 }
 
-.card-carousel--nav__right > div {
-  width: 30px;
-  height: 30px;
+.card-carousel--nav__right > div, .card-carousel--nav__left > div {
+  width: 15px;
+  height: 15px;
 }
 
 .card-carousel--nav__right > div > img {
@@ -133,17 +141,39 @@ body {
   width: auto;
 }
 
-.card-carousel--nav__left > div {
-  width: 30px;
-  height: 30px;
-}
-
 .card-carousel--nav__left > div > img {
   position: absolute;
   top: -35%;
   left: -20%;
-  height: 70%;
+  height: 40%;
   width: auto;
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .card-carousel--nav__left, .card-carousel--nav__right {
+    padding: 20px;
+  }
+  .card-carousel--nav__left > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-carousel--nav__left > div > img {
+    position: absolute;
+    top: -35%;
+    left: -20%;
+    height: 70%;
+    width: auto;
+  }
+
+  .card-carousel--nav__left {
+    left: -45px;
+  }
+
+  .card-carousel--nav__right {
+    right: -45px;
+  }
 }
 
 
@@ -221,6 +251,11 @@ body {
 }
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag.secondary:before {
   display: none !important;
+}
+
+.carousel-indicators {
+  bottom: -10px;
+  margin: 0;
 }
 
 h1 {

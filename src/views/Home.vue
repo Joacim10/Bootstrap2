@@ -93,35 +93,37 @@
 
       <div class="bg-dark">
         <div class="container">
-          <div class="row text-white my-5">
-            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-start pb-5">
-              <div class="bg-info p-4 text-center mb-5 p-0">
+          <div class="row text-white my-lg-5">
+            <div class="col-12 col-lg-3 d-flex justify-content-center justify-content-lg-start pb-5">
+              <div class="bg-info p-4 text-center mb-lg-5 p-0">
                 <h1 class="big-text font-weight-bold my-0">FLASH</h1>
                 <h1 class="big-text font-weight-bold my-0">SALE</h1>
                 <span class="">UP TO 50% OFF</span>
               </div>
             </div>
-            <div class="col-12 col-sm-6 d-flex justify-content-center flex-column my-5">
-              <div class="d-flex justify-content-between">
-                <div class="d-flex flex-column justify-content-center round bg-white align-items-center">
-                  <div class="text-info numbers">7</div>
-                  <div class="text-dark">days</div>
+            <div class="col-12 col-lg-9 d-flex justify-content-center flex-column my-lg-5">
+              <div class="text-center ml-lg-auto">
+                <div class="d-flex justify-content-lg-end justify-content-center">
+                  <div class="d-flex flex-column justify-content-center round bg-white align-items-center">
+                    <div class="text-info numbers">7</div>
+                    <div class="text-dark">Days</div>
+                  </div>
+                  <div class="d-flex ml-3 flex-column justify-content-center round bg-white align-items-center">
+                    <div class="text-info numbers">23</div>
+                    <div class="text-dark">Hays</div>
+                  </div>
+                  <div class="d-flex ml-3 flex-column justify-content-center round bg-white align-items-center">
+                    <div class="text-info numbers">46</div>
+                    <div class="text-dark">Minutes</div>
+                  </div>
+                  <div class="d-flex ml-3 flex-column justify-content-center round bg-white align-items-center">
+                    <div class="text-info numbers">12</div>
+                    <div class="text-dark">Seconds</div>
+                  </div>
                 </div>
-                <div class="d-flex flex-column justify-content-center round bg-white align-items-center">
-                  <div class="text-info numbers">23</div>
-                  <div class="text-dark">days</div>
+                <div class="text-center">
+                  <button class="btn btn-light text-info mx-0 rounded">SHOP NOW</button>
                 </div>
-                <div class="d-flex flex-column justify-content-center round bg-white align-items-center">
-                  <div class="text-info numbers">46</div>
-                  <div class="text-dark">days</div>
-                </div>
-                <div class="d-flex flex-column justify-content-center round bg-white align-items-center">
-                  <div class="text-info numbers">12</div>
-                  <div class="text-dark">days</div>
-                </div>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-light text-info ml-0 rounded">SHOP NOW</button>
               </div>
             </div>
           </div>
@@ -162,7 +164,6 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active text-center">
-
                 <div class="my-5 text-center">
                   <div>
                     <img src="@/assets/Quote.png" alt="">
@@ -275,8 +276,8 @@ export default {
   }
   .round {
     border-radius: 50% !important;
-    width: 110px;
-    height: 110px;
+    width: 109px;
+    height: 109px;
   }
   .big-text {
     font-size: 60px;
@@ -286,10 +287,17 @@ export default {
     font-size: 36px;
     font-family: Play;
     font-weight: bold;
-    margin-bottom: -10px;
+    margin-bottom: -12px;
+    margin-top: -10px;
   }
   #carouselWithSlides {
     min-height: 453px;
+  }
+
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
   }
 
   .carousel-item > img {

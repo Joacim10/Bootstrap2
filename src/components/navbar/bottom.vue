@@ -10,9 +10,9 @@
                             Browse Categories<i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">Women</a>
+                            <a class="dropdown-item" href="#">Men</a>
+                            <a class="dropdown-item" href="#">Kids</a>
                         </div>
                         </div>                    
                     </li>
@@ -43,10 +43,9 @@
                         Category<i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Women</a>
+                        <a class="dropdown-item" href="#">Men</a>
+                        <a class="dropdown-item" href="#">Kids</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -54,10 +53,10 @@
                         Pages<i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">My Account</a>
+                        <a class="dropdown-item" href="#">Shopping Cart</a>
+                        <a class="dropdown-item" href="#">Wishlist</a>
+                        <a class="dropdown-item" href="#">Compare</a>
                         </div>
                     </li>
                     <li class="nav-item active">
