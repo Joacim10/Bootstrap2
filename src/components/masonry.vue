@@ -1,6 +1,6 @@
 <template>
     <div class="grid-layout text-info my-5">
-        <div class="grid-item grid-item-1">
+        <div class="grid-item span-1 grid-item-1">
             <div class="bottom-label">Men</div>
         </div>
         <div class="grid-item span-2-1 grid-item-2">
@@ -12,7 +12,7 @@
         <div class="grid-item span-2-2 grid-item-4">
             <div class="bottom-label">Shoes</div>
         </div>
-        <div class="grid-item span-2 grid-item-5">
+        <div class="grid-item span-1 grid-item-5">
             <div class="bottom-label">Hats</div>
         </div>
         <div class="grid-item span-2-1 grid-item-6">
@@ -21,7 +21,7 @@
             <div class="text-white small">18 products</div> 
             </div>
         </div>
-        <div class="grid-item grid-item-7">
+        <div class="grid-item span-1 grid-item-7">
             <div class="bottom-label">Watches</div>
         </div>
     </div>
@@ -51,7 +51,6 @@ export default {
     grid-gap: 10px;
     grid-auto-rows: minmax(180px, auto);
     grid-auto-flow: dense;
-    padding: 10px;
 }
 
 .grid-item {
@@ -61,6 +60,18 @@ export default {
     font-weight: bold;
     background-color: #CCCCCC;
     border-radius: 5px;
+}
+
+.span-1 {
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+}
+
+@media only screen and (min-width: 567px) {
+    .span-1 {
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+    }
 }
 
 .span-2-2 {
