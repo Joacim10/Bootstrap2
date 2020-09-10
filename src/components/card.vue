@@ -28,7 +28,7 @@
             </div>
             <div class="bottom-right text-info d-none" :class="{ 'd-block' : item.stars >= 0}">
                 <i v-for="(stars, index) in item.stars" :key="index" class="fas fa-star"></i>
-                <i v-for="(stars, index) in (5-item.stars)" :key="index" class="far fa-star"></i>
+                <i v-for="item in nonFilledStars" :key="'nonFilled'+item" class="far fa-star"></i>
             </div>
         </div>
     </div>
@@ -39,6 +39,14 @@
 <script>
 export default {
   props: ['item'],
+  data() {
+      return {
+          nonFilledStars: Number
+      }
+  },
+  mounted: function() {
+      this.nonFilledStars = 5 - (this.item.stars || 0)
+  }
 }
 </script>
 
