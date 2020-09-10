@@ -23,22 +23,22 @@ export default {
 <style>
 
 .f-14 {
-  font-size: 0,875rem;
+  font-size: 0.875rem !important;
 }
 .f-16 {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 .f-18 {
-  font-size: 1.125rem;
+  font-size: 1.125rem !important;
 }
 .f-24 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
 }
 .f-36 {
-  font-size: 2.25rem;
+  font-size: 2.25rem !important;
 }
 .f-play {
-  font-family: play;
+  font-family: play !important;
 }
 
 body {
@@ -75,6 +75,15 @@ ul {
 
 .btn-info {
   background: #20D3C2 !important;
+}
+
+.btn-white {
+  background: #ffffff !important;
+}
+
+.rounded {
+  margin: 20px;
+  border-radius: 50px !important;
 }
 
 .badge-info {

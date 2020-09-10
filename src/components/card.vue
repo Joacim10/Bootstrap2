@@ -5,14 +5,13 @@
         <div class="card-original card-body card-carousel--card--footer">
             <p class="tag" v-for="(tag,index) in item.tag" :key="tag" :class="index &gt; 0 ? 'secondary' : ''">{{ item.tag[index] }}</p>
         </div>
-        <div class="card-hover card-body">
+        <div class="card-hover card-body p-1 p-sm-2">
             <div class="top-right">
                 <i class="my-1 fas fa-circle text-danger"></i>
                 <i class="my-1 fas fa-heart"></i>
                 <i class="my-1 fas fa-random"></i>
                 <i class="my-1 fas fa-search"></i>
                 <i class="my-1 fas fa-shopping-cart"></i>
-                
             </div>
             <div class="bottom-left">
                 <p>{{ item.name }}</p>
@@ -86,6 +85,7 @@ export default {
         background-color: #0E153D;
         position: absolute;
         z-index: +1;
+        padding: 10px;
     }
 
     .card-original {

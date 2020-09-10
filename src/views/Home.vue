@@ -129,8 +129,8 @@
       </div>
 
     <div class="container">
-      <div class="text-center pt-5">
-        <h1 class="">NEW <h1 class="text-info d-inline-block"> ARRIVALS </h1></h1>
+      <div class="text-center pt-5 pb-3">
+        <h1 class="">TOP <h1 class="text-info d-inline-block"> SELLERS </h1></h1>
         <div class="pb-3">
           <img class="" src="@/assets/curlyrow.png" alt="">
         </div>
@@ -140,7 +140,7 @@
         <div>
           <Card :item="item1"/>
         </div>
-        <div class="d-flex justify-content-between flex-column">
+        <div class="d-none d-sm-flex justify-content-between flex-column">
           <div>
             <Card :item="item2"/>
           </div>
@@ -204,8 +204,8 @@
           <span>Read our latest posts about our events and trending news</span>
         </div>
         <div class="pb-5">
-          <blogCarousel class="d-lg-none" :windowSize="1" :items="items"/>
-          <blogCarousel class="d-none d-lg-flex" :windowSize="2" :items="items"/>
+          <blogCarousel class="d-lg-none" :windowSize="1" :items="blogItems"/>
+          <blogCarousel class="d-none d-lg-flex" :windowSize="2" :items="blogItems"/>
         </div>
       </div>
 
@@ -248,6 +248,12 @@ export default {
         {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"], previous: '220', price: '190', img: 'Product thumb.png'},
         {name: 'Locanda', tag: ["Italian"], previous: '220', price: '190', img: 'Product thumb3.png'},
         {name: 'Garden Creamery', tag: ["Ice cream"], previous: '220', price: '190', img: 'Product thumb.png'},
+      ],
+      blogItems: [
+        {author: 'Adam Moore', titel: 'A beautiful scenery in the world we are missing'},
+        {author: 'Jonathon Doe', titel: 'We love our country, we love our peoples like ourselves'},
+        {author: 'Adam Moore', titel: 'A beautiful scenery in the world we are missing'},
+        {author: 'Jonathon Doe', titel: 'We love our country, we love our peoples like ourselves'}
       ]
     }
   }
@@ -265,10 +271,6 @@ export default {
   }
   .bg-light-grey {
     background-color: #F6F6F6;
-  }
-  .rounded {
-    margin: 20px;
-    border-radius: 50px !important;
   }
   .round {
     border-radius: 50% !important;

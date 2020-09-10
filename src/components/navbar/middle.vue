@@ -119,7 +119,7 @@ form {
     margin-left: auto;
 }
 
-@media screen and (min-width: 411px) {
+@media screen and (min-width: 423px) {
     #navbar-toggler{
         margin-left: 0;
     }

@@ -25,8 +25,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <router-link class="dropdown-item" to="shop">Shop</router-link>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Compare</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -35,7 +34,6 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                         <router-link class="dropdown-item" to="products">Products</router-link>
-                        <div class="dropdown-divider"></div>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
