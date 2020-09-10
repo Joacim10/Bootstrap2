@@ -235,23 +235,26 @@ export default {
   data: function () {
     return {
       item1: 
-        {name: "Men's denim shirts full", previous: '220', price: '190', img: 'Product thumb4.png'},
+        {tag: 'Shirts', stars: 5, name: "Men's denim shirts full", previous: '220', price: '190', img: 'Product thumb4.png'},
       item2: 
-        {name: "Women's leather bag and shoe", previous: '220', price: '190', img: 'Product thumb5.png'},
+        {tag: 'Shoes', stars: 5, name: "Women's leather bag and shoe", previous: '220', price: '190', img: 'Product thumb5.png'},
       item3: 
-        {name: "New look men's sneakers", previous: '220', price: '190', img: 'Product thumb6.png'},
+        {tag: 'Shoes', stars: 4, name: "New look men's sneakers", previous: '220', price: '190', img: 'Product thumb6.png'},
       featuredItems: [
-        {stars: 3, badge: 'HOT', name: "Winter collection for women's", previous: '220', price: '190', img: 'Product thumb3.png'},
-        {stars: 4, name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
-        {stars: 5, discount: 'discount', discountAmount: '-30%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'}
+        {tag: 'Fashion', stars: 5, badge: 'HOT', name: "Winter collection for women's", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {tag: 'Fashion', stars: 4, name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {tag: 'Fashion', stars: 2, discount: 'discount', discountAmount: '-30%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'},
+        {tag: 'Fashion', stars: 5, badge: 'HOT', name: "Winter collection for women's", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {tag: 'Fashion', stars: 4, name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {tag: 'Fashion', stars: 3, discount: 'discount', discountAmount: '-30%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'}
       ],
       newItems: [
-        {badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},
-        {badge: 'NEW', name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
-        {badge: 'NEW', name: "Circle pattern girls shirt", previous: '220', price: '190', img: 'Product thumb2.png'},
-        {badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},
-        {badge: 'NEW', name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
-        {badge: 'NEW', name: "Circle pattern girls shirt", previous: '220', price: '190', img: 'Product thumb2.png'}
+        {tag: 'Fashion', badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {tag: 'Fashion', badge: 'NEW', name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {tag: 'Fashion', badge: 'NEW', name: "Circle pattern girls shirt", previous: '220', price: '190', img: 'Product thumb2.png'},
+        {tag: 'Fashion', badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {tag: 'Fashion', badge: 'NEW', name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {tag: 'Fashion', badge: 'NEW', name: "Circle pattern girls shirt", previous: '220', price: '190', img: 'Product thumb2.png'}
       ],
       blogItems: [
         {author: 'Adam Moore', titel: 'A beautiful scenery in the world we are missing'},

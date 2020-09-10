@@ -16,9 +16,9 @@
                 <i class="my-1 fas fa-search"></i>
                 <i class="my-1 fas fa-shopping-cart"></i>
             </div>
-            <div class="bottom-left">
-                <p>{{ item.name }}</p>
-                <p class="border d-inline-block p-1 small text-center">fashion</p>
+            <div class="bottom-left text-white">
+                <p class="f-18">{{ item.name }}</p>
+                <p class="border d-inline-block p-1 small text-center">{{ item.tag }}</p>
                 <div class="">
                     <p class=""><s>${{ item.previous }}</s></p>
                 </div>
