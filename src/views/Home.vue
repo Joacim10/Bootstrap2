@@ -179,6 +179,24 @@
                   </div>
                 </div>
               </div>
+              <div class="carousel-item text-center">
+                <div class="mb-5 text-center">
+                  <div>
+                    <img src="@/assets/Quote.png" alt="">
+                  </div>
+                  <div>
+                    <img src="@/assets/Testimonial thumb.png" alt="">
+                  </div>
+                  <div>
+                    <img src="@/assets/stars.png" alt="">
+                  </div>
+                  <h2 class="text-info text-center">Scott Parker</h2>
+                    <span class="text-white">FCO, Biotech Inc.</span>
+                  <div class="d-flex justify-content-center">
+                    <span class="text-white w-50 d-block">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</span>
+                  </div>
+                </div>
+              </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -246,7 +264,7 @@ export default {
         {tag: 'Fashion', stars: 2, discount: 'discount', discountAmount: '-30%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'},
         {tag: 'Fashion', stars: 5, badge: 'HOT', name: "Winter collection for women's", previous: '220', price: '190', img: 'Product thumb3.png'},
         {tag: 'Fashion', stars: 4, name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
-        {tag: 'Fashion', stars: 3, discount: 'discount', discountAmount: '-30%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'}
+        {tag: 'Fashion', stars: 3, badge: 'HOT', discount: 'discount', discountAmount: '-20%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'}
       ],
       newItems: [
         {tag: 'Fashion', badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},

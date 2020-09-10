@@ -156,7 +156,7 @@ body {
   .card-carousel--nav__left, .card-carousel--nav__right {
     padding: 20px;
   }
-  .card-carousel--nav__left > div {
+  .card-carousel--nav__left > div, .card-carousel--nav__right > div {
     width: 30px;
     height: 30px;
   }

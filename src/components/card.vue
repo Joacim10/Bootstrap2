@@ -2,8 +2,10 @@
 <div>
     <div class="card-main">
         <img :src="require(`@/assets/${item.img}`)" alt="">
-        <div class="top-left text-white p-1 text-center d-none" :class="item.badge" >{{item.badge}}</div>
-        <div class="top-left text-white p-1 text-center d-none" :class="item.discount" >{{item.discountAmount}}</div>
+        <div class="top-left">
+            <div class="circle text-white p-1 text-center d-none" :class="item.badge" >{{item.badge}}</div>
+            <div class="circle text-white p-1 text-center d-none" :class="item.discount" >{{item.discountAmount}}</div>
+        </div>
 
         <div class="card-original card-body card-carousel--card--footer">
             <p >{{ item.name }}</p>
@@ -69,21 +71,25 @@ export default {
     .top-left {
         position:absolute;
         left: 0px;
-        top: 0px;
+        top: 0px;  
+        padding: 20px 20px 0;
+    }
+
+    .circle {
         border-radius: 50%;
         padding: 5px;
-        margin: 20px;
+        margin-bottom: 10px;
         width: 60px;
         height: 60px;
         display: flex;
         justify-content: center;
         align-content: center;
-        flex-direction: column;    
+        flex-direction: column;
     }
-      .card-main:hover .top-left {
-          display: none !important;
-      }
 
+    .card-main:hover .top-left {
+        display: none !important;
+    }
 
     .bottom-left {
         padding: 5px;
