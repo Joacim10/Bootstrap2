@@ -146,19 +146,20 @@ body {
 .card-carousel--nav__left > div > img {
   position: absolute;
   top: -35%;
-  left: -20%;
+  right: -15%;
   height: 40%;
   width: auto;
 }
 
 
 @media only screen and (min-width: 1200px) {
+
   .card-carousel--nav__left, .card-carousel--nav__right {
     padding: 20px;
   }
   .card-carousel--nav__left > div, .card-carousel--nav__right > div {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   .card-carousel--nav__left > div > img {
@@ -169,12 +170,37 @@ body {
     width: auto;
   }
 
+  .card-carousel--nav__right > div > img {
+    position: absolute;
+    top: -35%;
+    left: -15%;
+    height: 70%;
+    width: auto;
+  }
+
   .card-carousel--nav__left {
     left: -45px;
   }
 
   .card-carousel--nav__right {
     right: -45px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .card-carousel--nav__left {
+    left: -80px;
+    padding: 30px;
+  }
+
+  .card-carousel--nav__right {
+    right: -80px;
+    padding: 30px;
+  }
+
+  .card-carousel--nav__left > div, .card-carousel--nav__right > div {
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -232,8 +258,7 @@ body {
   margin: 0;
   margin-bottom: 2px;
   font-size: 19px;
-  font-weight: 500;
-  color: #2c3e50;
+  color: #ffff;
   user-select: none;
 }
 /deep/ .card-carousel-cards .card-carousel--card--footer p.tag {

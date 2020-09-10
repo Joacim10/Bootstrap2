@@ -4,7 +4,7 @@
         <div class="left">
         </div>
         <div class="right">
-            <div class="text-white ml-3 pb-2 px-1 mb-2">
+            <div class="text-white ml-3 pb-2 px-1 mb-2 pb-2">
                 <div class="d-inline-block py-2 px-1 mb-2 bg-info">
                     <div class="text-center">
                         <div class="font-weight-bold">
@@ -14,12 +14,12 @@
                     </div>
                 </div>
                 <p class="f-14">By {{item.author}}</p>
-                <p class="f-16 text-info">{{item.titel}}</p>
+                <p class="f-16 text-info pr-1">{{item.titel}}</p>
                 <div>
-                    <p class="border f-14 d-inline-block p-1 small text-center">Travel</p>
+                    <p class="mr-2 mt-2 border f-14 d-inline-block p-1 small text-center">Travel</p>
                     <p class="border f-14 d-inline-block p-1 small text-center">Fashion</p>
                 </div>
-                <button class="ml-0 mt-3 f-16 btn btn-white text-info rounded">Read more</button>
+                <button class="ml-0 my-3 f-16 btn btn-white text-info rounded">Read more</button>
             </div>
         </div>
     </div>
@@ -48,11 +48,11 @@ export default {
 
     .right {
         position: absolute;
-        width: 50%;
-        height: 70%;
         z-index: +2;
+        min-height: 75%;
+        width: 50%;
         right: 0;
-        top: 15%;
+        top: 12.5%;
         background-color: #0E153D;
     }
 

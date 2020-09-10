@@ -177,6 +177,23 @@ body {
   }
 }
 
+@media only screen and (min-width: 1300px) {
+  .card-carousel--nav__left {
+    left: -80px;
+    padding: 30px;
+  }
+
+  .card-carousel--nav__right {
+    right: -80px;
+    padding: 30px;
+  }
+
+  .card-carousel--nav__left > div, .card-carousel--nav__right > div {
+    width: 45px;
+    height: 45px;
+  }
+}
+
 
 .card-carousel--nav__left[disabled], .card-carousel--nav__right[disabled] {
   opacity: 1;

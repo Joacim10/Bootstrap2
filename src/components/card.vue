@@ -8,7 +8,7 @@
         </div>
 
         <div class="card-original card-body card-carousel--card--footer">
-            <p >{{ item.name }}</p>
+            <p class="f-18" >{{ item.name }}</p>
         </div>
         <div class="card-hover card-body p-1 p-sm-2">
             <div class="top-right">
