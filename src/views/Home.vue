@@ -46,9 +46,9 @@
         Check out our latest products from top fashion designers
       </div>
 
-        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
-        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
-        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>  
+        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="newItems"/>
+        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="newItems"/>
+        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="newItems"/>  
 
     </div>
 
@@ -84,9 +84,9 @@
           </div>
           <span>Check out our monthly featured products from top brands</span>
         </div>
-        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="items"/>
-        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="items"/>
-        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="items"/>  
+        <GeneralCarousel class="d-sm-none" :windowSize="1" :items="featuredItems"/>
+        <GeneralCarousel class="d-none d-sm-block d-md-none" :windowSize="2" :items="featuredItems"/>
+        <GeneralCarousel class="d-none d-md-block" :windowSize="3" :items="featuredItems"/>  
       </div>
 
       <div class="bg-dark">
@@ -234,20 +234,24 @@ export default {
   },
   data: function () {
     return {
-    item1: 
-        {name: 'Kin Khao', tag: ["Men's denim shirts full"], previous: '220', price: '190', img: 'Product thumb4.png'},
-    item2: 
-        {name: 'Jū-Ni', tag: ["Women's leather bag and shoe"], previous: '220', price: '190', img: 'Product thumb5.png'},
-    item3: 
-        {name: 'Delfina', tag: ["New look men's sneakers"], previous: '220', price: '190', img: 'Product thumb6.png'},
-    items: [
-        {name: 'Kin Khao', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Jū-Ni', tag: ["Winter collection for women's"], previous: '220', price: '190', img: 'Product thumb.png'},
-        {name: 'Delfina', tag: ["Pizza", "Casual"], previous: '220', price: '190', img: 'Product thumb2.png'},
-        {name: 'San Tung', tag: ["Chinese", "$$"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Anchor Oyster Bar', tag: ["Seafood", "Cioppino"], previous: '220', price: '190', img: 'Product thumb.png'},
-        {name: 'Locanda', tag: ["Italian"], previous: '220', price: '190', img: 'Product thumb3.png'},
-        {name: 'Garden Creamery', tag: ["Ice cream"], previous: '220', price: '190', img: 'Product thumb.png'},
+      item1: 
+        {name: "Men's denim shirts full", previous: '220', price: '190', img: 'Product thumb4.png'},
+      item2: 
+        {name: "Women's leather bag and shoe", previous: '220', price: '190', img: 'Product thumb5.png'},
+      item3: 
+        {name: "New look men's sneakers", previous: '220', price: '190', img: 'Product thumb6.png'},
+      featuredItems: [
+        {stars: 3, badge: 'HOT', name: "Winter collection for women's", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {stars: 4, name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {stars: 5, discount: 'discount', discountAmount: '-30%', name: "Red women's blazer full", previous: '220', price: '190', img: 'Product thumb2.png'}
+      ],
+      newItems: [
+        {badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {badge: 'NEW', name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {badge: 'NEW', name: "Circle pattern girls shirt", previous: '220', price: '190', img: 'Product thumb2.png'},
+        {badge: 'NEW', name: "Blue silk flare sleeved top", previous: '220', price: '190', img: 'Product thumb3.png'},
+        {badge: 'NEW', name: "New look men's coat", previous: '220', price: '190', img: 'Product thumb.png'},
+        {badge: 'NEW', name: "Circle pattern girls shirt", previous: '220', price: '190', img: 'Product thumb2.png'}
       ],
       blogItems: [
         {author: 'Adam Moore', titel: 'A beautiful scenery in the world we are missing'},

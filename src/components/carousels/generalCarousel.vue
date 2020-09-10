@@ -1,7 +1,7 @@
 <template>
 <div id="carousel" class="position-relative">
     <ol id="carousel-indicators" class="carousel-indicators">
-      <li v-for="(item, index) in (items.slice(0, numberOfIndicators))" :key="index"  @click="moveCarousel(0, index)" class="indicator" :class="{ 'active' : index == activeIndicator}"></li>
+      <li v-for="(item, index) in (items.slice(0, numberOfIndicators))" :key="index"  @click="moveCarousel(0, index)" class="indicator" :class="{ 'active' : index === activeIndicator}"></li>
     </ol>
 
     <div class="card-carousel-wrapper">
@@ -13,7 +13,7 @@
       <div class="card-carousel">
         <div class="card-carousel--overflow-container">
           <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + '%' + ')' }">
-              <Card class="card-carousel--card" :style="computedWidthAndMargin" v-for="item in items" :key="item.name" :item="item" :name="item.name" :tag="items.tag" />
+              <Card class="card-carousel--card" :style="computedWidthAndMargin" v-for="(item, index) in items" :key="index" :item="item" :name="item.name" :tag="items.tag" />
           </div>
         </div>
       </div>

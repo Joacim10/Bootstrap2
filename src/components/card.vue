@@ -2,8 +2,11 @@
 <div>
     <div class="card-main">
         <img :src="require(`@/assets/${item.img}`)" alt="">
+        <div class="top-left text-white p-1 text-center d-none" :class="item.badge" >{{item.badge}}</div>
+        <div class="top-left text-white p-1 text-center d-none" :class="item.discount" >{{item.discountAmount}}</div>
+
         <div class="card-original card-body card-carousel--card--footer">
-            <p class="tag" v-for="(tag,index) in item.tag" :key="tag" :class="index &gt; 0 ? 'secondary' : ''">{{ item.tag[index] }}</p>
+            <p >{{ item.name }}</p>
         </div>
         <div class="card-hover card-body p-1 p-sm-2">
             <div class="top-right">
@@ -23,6 +26,10 @@
                     <h3 class="">${{ item.price }}</h3>
                 </div>
             </div>
+            <div class="bottom-right text-info d-none" :class="{ 'd-block' : item.stars >= 0}">
+                <i v-for="(stars, index) in item.stars" :key="index" class="fas fa-star"></i>
+                <i v-for="(stars, index) in (5-item.stars)" :key="index" class="far fa-star"></i>
+            </div>
         </div>
     </div>
 </div>
@@ -32,7 +39,6 @@
 <script>
 export default {
   props: ['item'],
-
 }
 </script>
 
@@ -52,6 +58,25 @@ export default {
         margin: 5px;
     }
 
+    .top-left {
+        position:absolute;
+        left: 0px;
+        top: 0px;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 20px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;    
+    }
+      .card-main:hover .top-left {
+          display: none !important;
+      }
+
+
     .bottom-left {
         padding: 5px;
         margin: 5px;
@@ -60,10 +85,17 @@ export default {
         left: 0px;
     }
 
+    .bottom-right {
+        padding: 5px;
+        margin: 5px;
+        position:absolute;
+        bottom: 0px;
+        right: 0px;
+    }
+
     p {
         margin-bottom: 2px;
     }
-
 
     .card-main {
         position: relative;
@@ -109,6 +141,19 @@ export default {
         display: block !important;
     }
 
+    .NEW {
+        background-color: #20D3C2;
+        display: flex !important;
+    }
 
+    .HOT {
+        background-color: red;  
+        display: flex !important;
+    }
+
+    .discount {
+        background-color: #64CB83; 
+        display: flex !important;
+    }
 
 </style>
