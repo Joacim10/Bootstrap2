@@ -3,7 +3,7 @@
         <div class="container">  
             <div class="d-flex justify-content-between w-100" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown-toggle pl-0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         ENG
                         </a>
@@ -14,7 +14,7 @@
                         <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown text-white">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         USD
                         </a>
@@ -27,8 +27,8 @@
                     </li>
                 </ul>
                 <div class="my-2 my-md-0">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active border-right">
+                    <ul class="navbar-nav text-white">
+                        <li class="nav-item border-right">
                             <router-link class="nav-link" to="#">Newsletter <span class="sr-only">(current)</span></router-link>
                         </li>
                         <li class="nav-item border-right">
@@ -37,7 +37,7 @@
                         <li class="nav-item border-right">
                             <router-link class="nav-link" to="#">FAQ</router-link>
                         </li>
-                        <SocialMedia/>
+                        <SocialMedia color="text-white"/>
                     </ul>
                 </div>
             </div>
@@ -55,6 +55,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
 
 </style>

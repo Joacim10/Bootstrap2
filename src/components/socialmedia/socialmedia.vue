@@ -1,29 +1,45 @@
 <template>
-  <li class="nav-item d-flex align-items-center">
-        <a class="nav-link" href="#">     
-          <i class="fab fa-facebook-f ml-1"></i>
+  <li class="nav-item d-flex align-items-center justify-content-start">
+        <a class="nav-link" :class="color" href="#">     
+          <i class="fab fa-facebook-f"></i>
         </a>
-        <a class="nav-link" href="#">     
-          <i class="fab fa-twitter ml-1"></i>
+        <a class="nav-link" :class="color" href="#">     
+          <i class="fab fa-twitter"></i>
         </a>
-        <a class="nav-link" href="#">     
-          <i class="fab fa-instagram ml-1"></i>
+        <a class="nav-link" :class="color" href="#">     
+          <i class="fab fa-instagram"></i>
         </a>
-        <a class="nav-link" href="#">     
-          <i class="fab fa-tiktok ml-1"></i>
+        <a class="nav-link" :class="color" href="#">     
+          <i class="fab fa-pinterest-p"></i>
         </a>
-        <a class="nav-link" href="#">     
-          <i class="fab fa-youtube ml-1"></i>
+        <a class="nav-link" :class="color" href="#">     
+          <i class="fab fa-youtube"></i>
         </a>
   </li>
 </template>
 
 <script>
 export default {
-
+  props: ['color'],
+/*   data() {
+    return {
+    color: ''
+    }
+  } */
 }
 </script>
 
-<style>
+<style scoped>
+ .nav-link {
+   padding: 5px !important;
+ }
+
+ a.text-info:focus, a.text-info:hover {
+    color: white!important;
+}
+
+ a.text-white:focus, a.text-white:hover {
+    color: rgba(255, 255, 255, 0.749)!important;
+}
 
 </style>

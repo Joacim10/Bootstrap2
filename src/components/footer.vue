@@ -31,7 +31,9 @@
           <Logo class="mb-5" :color="true"/>
           <p class="pb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim quam, ullamcorper vel tellus vitae, tempus fringilla lectus. Donec maximus justo eu nisl convallis iaculis. Aenean laoreet.</p>
           <p>Follow us</p>
-          <SocialMedia/>
+          <div class="">
+            <SocialMedia color="text-info"/>
+          </div>
         </div>
         <div class="col-6 col-sm-4 col-lg-3">
           <p class="text-info f-18 font-weight-bold pb-4">CONTACT INFO</p>
