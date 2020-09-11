@@ -66,9 +66,9 @@
               </div>
             </div>
             <div class="col-12 col-sm-6 d-flex justify-content-center flex-column my-3">
-              <span class="small pr-lg-5 mr-lg-5">Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra scelerisque purus. Nam pretium iaculis ultrices.</span>
-              <div>
-                <button class="btn btn-light text-info ml-0 rounded">SHOP NOW</button>
+              <span class="small pr-lg-5 mr-lg-5 text-center text-md-left">Donec pulvinar arcu vitae ipsum varius cursus. Nunc iaculis fermentum iaculis. Nunc pulvinar purus at erat lacinia, ut convallis nibh consequat. Integer nulla nisi, aliquam at tellus a, viverra scelerisque purus. Nam pretium iaculis ultrices.</span>
+              <div class="text-center text-md-left">
+                <button class="btn btn-light text-info ml-0 rounded">LEARN MORE</button>
               </div>
             </div>
           </div>
